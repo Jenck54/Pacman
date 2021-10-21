@@ -1,7 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: purple;
+}
 #grille {
     display: grid;
     grid-template-columns: repeat(19,40px);
     grid-template-rows: repeat(22,40px);
+    border: solid red ;
+    width: fit-content;
+    margin: auto;
+    margin-top: 30px;
 }
 .mur {
     background-image: url(../img/mur.gif);
@@ -11,4 +23,7 @@
 }
 .bonbon {
     background-image: url(../img/bonbon.gif);
+}
+.pacman {
+    background-image: url(../img/pacman4.gif);
 }

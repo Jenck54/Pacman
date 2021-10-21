@@ -22,11 +22,25 @@ let grille = [
     [0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0],
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 ];
+let pacman = {
+    x:5,
+    y:2,
+    direction:0
+}
+function affichePacman() {
+    let elem = document.createElement("div")
+    elem.className="pacman"
+    document.getElementById("grille").appendChild(elem)
+    elem.style.gridRowStart=pacman.y
+    elem.style.gridColumnStart=pacman.x
+}
 function afficheGrille(){
     document.getElementById("grille").innerHTML=""
     for (let i=0; i<22; i++){
         for (let j=0; j<19; j++){
             let elem = document.createElement("div")
+            elem.style.gridRowStart=i+1
+            elem.style.gridColumnStart=j+1
             if (grille[i][j]==0){
                 elem.className="mur"
             }
@@ -40,4 +54,8 @@ function afficheGrille(){
         }
     }
 }
-setInterval(afficheGrille,500)
+function tourDeJeu(){
+    afficheGrille()
+    affichePacman()
+}
+setInterval(tourDeJeu,500)
