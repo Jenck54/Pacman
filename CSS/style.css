@@ -1,0 +1,14 @@
+#grille {
+    display: grid;
+    grid-template-columns: repeat(19,40px);
+    grid-template-rows: repeat(22,40px);
+}
+.mur {
+    background-image: url(../img/mur.gif);
+}
+.sol {
+    background-image: url(../img/sol.gif);
+}
+.bonbon {
+    background-image: url(../img/bonbon.gif);
+}
