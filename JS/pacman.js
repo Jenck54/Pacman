@@ -22,3 +22,22 @@ let grille = [
     [0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0],
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 ];
+function afficheGrille(){
+    document.getElementById("grille").innerHTML=""
+    for (let i=0; i<22; i++){
+        for (let j=0; j<19; j++){
+            let elem = document.createElement("div")
+            if (grille[i][j]==0){
+                elem.className="mur"
+            }
+            else if (grille[i][j]==1){
+                elem.className="sol"
+            }
+            else {
+                elem.className="bonbon"
+            }
+            document.getElementById("grille").appendChild(elem)
+        }
+    }
+}
+setInterval(afficheGrille,500)
